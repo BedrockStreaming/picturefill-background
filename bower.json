@@ -1,0 +1,25 @@
+{
+    "name": "picturefill-background",
+    "version": "0.1.0",
+    "license": "MIT",
+    "keywords": [
+        "picture",
+        "background",
+        "responsive",
+        "picturefill",
+        "picturefill-background"
+    ],
+    "main": "./picturefill-background.js",
+    "ignore": [
+        "index.html",
+        "test.html",
+        "test.js"
+    ],
+    "dependencies": {
+        "matchmedia": "0.1.0"
+    },
+    "devDependencies": {
+        "mocha": "1.12.0",
+        "chai": "1.7.2"
+    }
+}

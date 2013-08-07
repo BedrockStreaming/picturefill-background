@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Picturefill-background</title>
+        <script src="bower_components/matchmedia/matchMedia.js"></script>
+        <script src="picturefill-background.js"></script>
+        <style type="text/css">
+            html, body {
+                height: 100%;
+                margin: 0;
+            }
+
+            #container {
+                width: 100%;
+                height: 100%;
+                position: relative;
+            }
+
+            .tile {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="picturefill-background tile">
+                <span data-src="http://dummyimage.com/400x300/000000/ffffff&text=400+x+300"></span>
+                <span data-src="http://dummyimage.com/640x480/000000/ffffff&text=640+x+480" data-media="(min-width: 400px)"></span>
+                <span data-src="http://dummyimage.com/800x600/000000/ffffff&text=800+x+600" data-media="(min-width: 640px)"></span>
+                <span data-src="http://dummyimage.com/1024x768/000000/ffffff&text=1024+x+768" data-media="(min-width: 800px)"></span>
+            </div>
+        </div>
+    </body>
+</html>
