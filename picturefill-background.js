@@ -4,7 +4,7 @@
     /**
      * Default options
      * Redefine this value to replace some of the options
-     * (ex: w.picturefillOptions.selector = "custom";)
+     * (ex: picturefillOptions.selector = "custom";)
      */
     w.picturefillOptions = {
         selector: "picturefill-background",
