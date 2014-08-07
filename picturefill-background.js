@@ -4,7 +4,7 @@
     /**
      * Default options
      * Redefine this value to replace some of the options
-     * (ex: picturefillOptions.selector = "custom";)
+     * (ex: w.picturefillOptions.selector = "custom";)
      */
     w.picturefillOptions = {
         selector: "picturefill-background",
@@ -24,9 +24,11 @@
                 matches = [];
 
             for( var j = 0, jl = sources.length; j < jl; j++ ) {
-                var media = sources[ j ].getAttribute( "data-media" );
+                var src   = sources[ j ].getAttribute( "data-src" ),
+                    media = sources[ j ].getAttribute( "data-media" );
 
-                if ( !media || ( w.matchMedia && w.matchMedia( media ).matches ) ) {
+
+                if ( src && (!media || ( w.matchMedia && w.matchMedia( media ).matches )) ) {
                     matches.push( sources[ j ] );
                 }
             }
