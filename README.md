@@ -19,7 +19,7 @@ Mark up your responsive images like this.
 ### Default options
 
 ```js
-w.picturefillOptions = {
+w.picturefillBackgroundOptions = {
     selector: "picturefill-background",
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
@@ -30,7 +30,7 @@ w.picturefillOptions = {
 Redefine this value to replace some of the options
 
 ```js
-picturefillOptions.selector = "custom-selector";
+picturefillBackgroundOptions.selector = "custom-selector";
 ```
 
 ### Explained...

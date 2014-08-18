@@ -5,51 +5,51 @@ var assert = chai.assert,
 var runTest = function () {
     describe('Default options', function() {
         it('default selector', function() {
-            assert.equal(picturefillOptions.selector, 'picturefill-background');
+            assert.equal(picturefillBackgroundOptions.selector, 'picturefill-background');
         });
 
         it('default background size', function() {
-            assert.equal(picturefillOptions.backgroundSize, 'cover');
+            assert.equal(picturefillBackgroundOptions.backgroundSize, 'cover');
         });
 
         it('default background position', function() {
-            assert.equal(picturefillOptions.backgroundPosition, '50% 50%');
+            assert.equal(picturefillBackgroundOptions.backgroundPosition, '50% 50%');
         });
 
         it('default background repeat', function() {
-            assert.equal(picturefillOptions.backgroundRepeat, 'no-repeat');
+            assert.equal(picturefillBackgroundOptions.backgroundRepeat, 'no-repeat');
         });
     });
 
     describe('Override default options', function() {
-        var options = picturefillOptions;
+        var options = picturefillBackgroundOptions;
 
         it('default selector', function() {
-            picturefillOptions.selector = "selector";
-            assert.equal(picturefillOptions.selector, 'selector');
+            picturefillBackgroundOptions.selector = "selector";
+            assert.equal(picturefillBackgroundOptions.selector, 'selector');
         });
 
         it('default background size', function() {
-            picturefillOptions.backgroundSize = "size";
-            assert.equal(picturefillOptions.backgroundSize, 'size');
+            picturefillBackgroundOptions.backgroundSize = "size";
+            assert.equal(picturefillBackgroundOptions.backgroundSize, 'size');
         });
 
         it('default background position', function() {
-            picturefillOptions.backgroundPosition = "position";
-            assert.equal(picturefillOptions.backgroundPosition, 'position');
+            picturefillBackgroundOptions.backgroundPosition = "position";
+            assert.equal(picturefillBackgroundOptions.backgroundPosition, 'position');
         });
 
         it('default background repeat', function() {
-            picturefillOptions.backgroundRepeat = "repeat";
-            assert.equal(picturefillOptions.backgroundRepeat, 'repeat');
+            picturefillBackgroundOptions.backgroundRepeat = "repeat";
+            assert.equal(picturefillBackgroundOptions.backgroundRepeat, 'repeat');
         });
 
-        picturefillOptions = options;
+        picturefillBackgroundOptions = options;
     });
 
     describe('Current background picture', function() {
         var viewportWidth = document.documentElement.clientWidth;
-        var container = document.getElementsByClassName( picturefillOptions.selector );
+        var container = document.getElementsByClassName( picturefillBackgroundOptions.selector );
         var picture = container[0].style.backgroundImage;
 
         var type = "big";
