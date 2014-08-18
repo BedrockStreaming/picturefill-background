@@ -4,9 +4,9 @@
     /**
      * Default options
      * Redefine this value to replace some of the options
-     * (ex: w.picturefillOptions.selector = "custom";)
+     * (ex: w.picturefillBackgroundOptions.selector = "custom";)
      */
-    w.picturefillOptions = {
+    w.picturefillBackgroundOptions = {
         selector: "picturefill-background",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
@@ -16,8 +16,8 @@
     /**
      * Apply a responsive background image
      */
-    w.picturefill = function() {
-        var picturefills = w.document.getElementsByClassName( w.picturefillOptions.selector );
+    w.picturefillBackground = function() {
+        var picturefills = w.document.getElementsByClassName( w.picturefillBackgroundOptions.selector );
 
         for ( var i = 0, il = picturefills.length; i < il; i++ ) {
             var sources = picturefills[ i ].getElementsByTagName( "span" ),
@@ -35,9 +35,9 @@
 
             if ( matches.length ) {
                 picturefills[i].style.backgroundImage = "url(" + matches.pop().getAttribute( "data-src" ) + ")";
-                picturefills[i].style.backgroundSize = w.picturefillOptions.backgroundSize;
-                picturefills[i].style.backgroundRepeat = w.picturefillOptions.backgroundRepeat;
-                picturefills[i].style.backgroundPosition = w.picturefillOptions.backgroundPosition;
+                picturefills[i].style.backgroundSize = w.picturefillBackgroundOptions.backgroundSize;
+                picturefills[i].style.backgroundRepeat = w.picturefillBackgroundOptions.backgroundRepeat;
+                picturefills[i].style.backgroundPosition = w.picturefillBackgroundOptions.backgroundPosition;
             }
         }
     };
@@ -46,15 +46,15 @@
      * Run on resize and domready (w.load as a fallback)
      */
     if ( w.addEventListener ) {
-        w.addEventListener( "load", w.picturefill, false );
-        w.addEventListener( "resize", w.picturefill, false );
+        w.addEventListener( "load", w.picturefillBackground, false );
+        w.addEventListener( "resize", w.picturefillBackground, false );
         w.addEventListener( "DOMContentLoaded", function() {
-            w.picturefill();
-            w.removeEventListener( "load", w.picturefill, false );
+            w.picturefillBackground();
+            w.removeEventListener( "load", w.picturefillBackground, false );
         }, false );
     }
     else if ( w.attachEvent ) {
-        w.attachEvent( "onload", w.picturefill );
+        w.attachEvent( "onload", w.picturefillBackground );
     }
 
 }( this ));
