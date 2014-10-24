@@ -27,17 +27,22 @@
                 var src   = sources[ j ].getAttribute( "data-src" ),
                     media = sources[ j ].getAttribute( "data-media" );
 
-
                 if ( src && (!media || ( w.matchMedia && w.matchMedia( media ).matches )) ) {
-                    matches.push( sources[ j ] );
+                    matches.push( src );
                 }
             }
 
             if ( matches.length ) {
-                picturefills[i].style.backgroundImage = "url(" + matches.pop().getAttribute( "data-src" ) + ")";
-                picturefills[i].style.backgroundSize = w.picturefillBackgroundOptions.backgroundSize;
-                picturefills[i].style.backgroundRepeat = w.picturefillBackgroundOptions.backgroundRepeat;
-                picturefills[i].style.backgroundPosition = w.picturefillBackgroundOptions.backgroundPosition;
+                src = matches.pop();
+                var exp = new RegExp( src );
+
+                // Update target element's background image, if necessary
+                if ( !exp.test( picturefills[ i ].style.backgroundImage ) ) {
+                    picturefills[i].style.backgroundImage = "url(" + src + ")";
+                    picturefills[i].style.backgroundSize = w.picturefillBackgroundOptions.backgroundSize;
+                    picturefills[i].style.backgroundRepeat = w.picturefillBackgroundOptions.backgroundRepeat;
+                    picturefills[i].style.backgroundPosition = w.picturefillBackgroundOptions.backgroundPosition;
+                }
             }
         }
     };
