@@ -15,10 +15,9 @@
         "test.html",
         "test.js"
     ],
-    "dependencies": {
-        "matchmedia": "0.1.0"
-    },
+    "dependencies": {},
     "devDependencies": {
+        "matchmedia": "0.2.0",
         "mocha": "1.12.0",
         "chai": "1.7.2"
     }
