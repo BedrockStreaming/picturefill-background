@@ -37,8 +37,8 @@ picturefillBackgroundOptions.selector = "custom-selector";
 
 Notes on the markup above...
 
-* The `div[class="picturefill-background"]` element's is used for apply background-image attribute.
+* The `div[class="picturefill-background"]` element is used to apply `background-image` attribute.
 * The `div[class="picturefill-background"]` element can contain any number of `div[data-source]` elements.
 * Each `div[data-src]` element must have a `data-src` attribute specifying the image path.
-* Each `div[data-src]` element can have an optional `[data-media]` attribute to make it apply in specific media settings. Both media types and queries can be used, like a native `media` attribute, but support for media _queries_ depends on the browser (unsupporting browsers fail silently).
-* The `matchMedia` polyfill is necessary to support the `data-media` attribute across browsers (such as IE9), even in browsers that support media queries, although it is becoming more widely supported in new browsers.
+* Each `div[data-src]` element can have an optional `[data-media]` attribute to make it apply in specific media settings. Both media types and queries can be used, like a native `media` attribute, but support for media _queries_ depends on the browser (unsupported browsers fail silently).
+* The [matchMedia](https://github.com/paulirish/matchMedia.js) polyfill is required to support the `data-media` attribute in older browsers (e.g. IE9, Android 2.3 Browser). See [http://caniuse.com/#feat=matchmedia](http://caniuse.com/#feat=matchmedia) for a table detailing native support for the `matchMedia` API.
