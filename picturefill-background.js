@@ -2,6 +2,13 @@
     "use strict";
 
     /**
+     * Utilities
+     */
+    var escapeRegExp = function( string ) {
+        return string.replace( /[.*+?^${}()|[\]\\]/g, '\\$&' );
+    };
+
+    /**
      * Default options
      * Redefine this value to replace some of the options
      * (ex: w.picturefillBackgroundOptions.selector = "custom";)
@@ -34,11 +41,11 @@
 
             if ( matches.length ) {
                 src = matches.pop();
-                var exp = new RegExp( src );
+                var exp = new RegExp( escapeRegExp( src ) );
 
                 // Update target element's background image, if necessary
                 if ( !exp.test( picturefills[ i ].style.backgroundImage ) ) {
-                    picturefills[i].style.backgroundImage = "url(" + src + ")";
+                    picturefills[i].style.backgroundImage = "url('" + src + "')";
                     picturefills[i].style.backgroundSize = w.picturefillBackgroundOptions.backgroundSize;
                     picturefills[i].style.backgroundRepeat = w.picturefillBackgroundOptions.backgroundRepeat;
                     picturefills[i].style.backgroundPosition = w.picturefillBackgroundOptions.backgroundPosition;
