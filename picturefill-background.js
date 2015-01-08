@@ -5,7 +5,7 @@
      * Utilities
      */
     var escapeRegExp = function( string ) {
-        return string.replace( /[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, '\\$&' );
+        return string.replace( /[.*+?^${}()|[\]\\]/g, '\\$&' );
     };
 
     /**
