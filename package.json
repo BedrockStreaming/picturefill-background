@@ -1,0 +1,35 @@
+{
+  "name": "picturefill-background",
+  "version": "1.0.2",
+  "description": "A Responsive Images approach like Picturefill but managing a picture on background-image css attribute.",
+  "main": "picturefill-background.js",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/M6Web/picturefill-background.git"
+  },
+  "keywords": [
+    "picture",
+    "background",
+    "responsive",
+    "picturefill",
+    "picturefill-background"
+  ],
+  "author": "M6Web",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/M6Web/picturefill-background/issues"
+  },
+  "homepage": "https://github.com/M6Web/picturefill-background#readme",
+  "devDependencies": {
+    "chai": "^1.7.2",
+    "match-media": "0.2.0",
+    "mocha": "^1.12.0"
+  }
+}
