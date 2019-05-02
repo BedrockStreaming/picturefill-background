@@ -69,4 +69,4 @@
         w.attachEvent( "onload", w.picturefillBackground );
     }
 
-}( this ));
+}( window ));
