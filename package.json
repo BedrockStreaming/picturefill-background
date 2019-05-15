@@ -1,6 +1,6 @@
 {
   "name": "picturefill-background",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A Responsive Images approach like Picturefill but managing a picture on background-image css attribute.",
   "main": "picturefill-background.js",
   "directories": {
